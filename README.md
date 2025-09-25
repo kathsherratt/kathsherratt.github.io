@@ -20,6 +20,9 @@ I am a happy Londoner, a feminist, and a [community gardener](https://www.albert
 
 ### My work
 
+All of my work is openly available, from concept to code to publication. 
+If you are interested in any of my work and can't find it, please contact me. 
+
 - PhD by prior publication: 
   - [Collaborative outbreak modelling for decision support: evaluating trade-offs from multi-model combination](https://researchonline.lshtm.ac.uk/id/eprint/4674767/)
 - [Papers](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en)
@@ -27,6 +30,8 @@ I am a happy Londoner, a feminist, and a [community gardener](https://www.albert
 - [Research library](https://www.zotero.org/kathsherratt/library)
 
 ### Contact
+
+Please get in touch - I'm always glad to chat about these research themes, hear feedback, and support similar work.
 
 - [@kathsherratt](https://twitter.com/kathsherratt)
 - [LinkedIn](https://www.linkedin.com/in/kathsherratt/)
