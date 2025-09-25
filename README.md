@@ -1,17 +1,30 @@
 ### About
 
-I'm Kath, a research fellow at the LSHTM in London. I work in the [epiforecasts](https://epiforecasts.io/) group, based in the [Centre for Mathematical Modelling of Infectious Disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases). 
+I'm Kath, a researcher working on real-time epidemiological analysis during outbreaks of infectious disease. 
+I work in the [epiforecasts](https://epiforecasts.io/) group, based in the [Centre for Mathematical Modelling of Infectious Disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases) in London. 
 
-In general I'm interested in model evaluation and public health decision making, and the wider structures and processes of modelling work at the interface of science and policy.
+My core interest is in rapid evidence synthesis for public health decision-making. 
+I focus on using quantitative modelling to understand infectious disease dynamics, with particular experience in real-time forecasting. 
+My work includes 
 
-I focus on collaborative modelling - collecting, combining and evaluating the projections of multiple independent models - for real-time outbreak analysis. I worked on the development and evaluation of the European COVID-19 [Forecast](https://covid19forecasthub.eu/) and [Scenario](https://covid19scenariohub.eu/) Hubs, and before that, I worked on supporting the UK's emergency response to COVID-19. I previously trained in epidemiology. 
+- methods for model evaluation, comparison, and combination (ensemble modelling)
+- combining scientific judgements through expert elicitation and consensus forming
+- evaluating the strengths, weaknesses, and trade-offs in scientific advisory groups that operate within the resource constraints of emergency response.
 
-### Recent work
+I previously worked at the Wellcome Trust before training in epidemiology. 
+I then worked on the COVID-19 response, contributing to the UK’s Scientific Advisory Group for Emergencies and building modelling infrastructure for the European Centre for Disease Prevention and Control. 
+
+I currently lead a theme of work around outbreak response at LSHTM. 
+I teach across modules in epidemiology and data science, and advocate for an inclusive working environment at my institution, focussing on disability. 
+I am a happy Londoner, a feminist, and a [community gardener](https://www.albertatra.org/alberta-fruit-commons).
+
+### My work
 
 - PhD by prior publication: 
   - [Collaborative outbreak modelling for decision support: evaluating trade-offs from multi-model combination](https://researchonline.lshtm.ac.uk/id/eprint/4674767/)
-- [Research papers](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en)
+- [Papers](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en)
 - [Software](https://github.com/kathsherratt)
+- [Research library](https://www.zotero.org/kathsherratt/library)
 
 ### Contact
 
