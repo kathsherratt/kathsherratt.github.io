@@ -1,0 +1,24 @@
+project:
+  type: website
+
+website:
+  open-graph: true
+  title: "Kath Sherratt"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: notes.qmd
+        text: Notes
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+
+execute:
+  freeze: auto
+

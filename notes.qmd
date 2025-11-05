@@ -1,0 +1,26 @@
+---
+title: "Notes"
+format: html
+---
+
+_("Kath has [Issues](https://github.com/kathsherratt/kathsherratt.github.io/issues)")_
+
+```{r}
+library(here)
+library(gh)
+owner <- "kathsherratt"
+repo <- "kathsherratt"
+issues <- gh("/repos/:owner/:repo/issues",
+             owner = owner, repo = repo,
+             state = "open", .limit = Inf)
+
+for (issue in issues) {
+  date <- strsplit(issue[["updated_at"]], "T")[[1]][1]
+  title <- issue[["title"]]
+  body <- issue[["body"]]
+  cat(paste0("### ", title,  "\n\n"), 
+      paste0(date, "\n\n"),
+      body, 
+      "\n\n---\n\n")
+}
+```
