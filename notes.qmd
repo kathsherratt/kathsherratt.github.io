@@ -6,6 +6,7 @@ format: html
 _("Kath has [Issues](https://github.com/kathsherratt/kathsherratt.github.io/issues)")_
 
 ```{r}
+#| code-fold: true
 library(here)
 library(gh)
 owner <- "kathsherratt"
