@@ -1,13 +1,15 @@
 ---
-title: "Notes"
 format: html
+code-fold: true
+toc: true
+toc-depth: 2
 ---
 
 _("Kath has [Issues](https://github.com/kathsherratt/kathsherratt.github.io/issues)")_
 
-```{r}
-library(here)
+```{r, message=FALSE, warning=FALSE, output="asis"}
 library(gh)
+
 owner <- "kathsherratt"
 repo <- "kathsherratt"
 issues <- gh("/repos/:owner/:repo/issues",
@@ -15,12 +17,24 @@ issues <- gh("/repos/:owner/:repo/issues",
              state = "open", .limit = Inf)
 
 for (issue in issues) {
+  labels <- ""
+  if (length(issue[["labels"]]) > 0) {
+    for (label in issue[["labels"]]) {
+      labels <- paste0(labels, 
+        ' <span style="background-color:#', label$color, 
+        '; color:white; padding:2px 6px; border-radius:3px; font-size:12px;">',
+        label$name, '</span>')
+    }
+  }
+  
   date <- strsplit(issue[["updated_at"]], "T")[[1]][1]
   title <- issue[["title"]]
   body <- issue[["body"]]
-  cat(paste0("### ", title,  "\n\n"), 
-      paste0(date, "\n\n"),
-      body, 
-      "\n\n---\n\n")
+  
+  cat("## ", title, " ", labels, "\n\n",
+      date, "\n\n",
+      if (!is.null(body)) body else "", "\n\n",
+      "---\n\n",
+      sep = "")
 }
 ```
