@@ -9,9 +9,93 @@
   {
     "objectID": "notes.html",
     "href": "notes.html",
-    "title": "Notes",
+    "title": "Kath Sherratt",
     "section": "",
-    "text": "(“Kath has Issues”)\n\nlibrary(here)\n\nhere() starts at /Users/kathsherratt/Documents/Github/kathsherratt\n\nlibrary(gh)\nowner &lt;- \"kathsherratt\"\nrepo &lt;- \"kathsherratt\"\nissues &lt;- gh(\"/repos/:owner/:repo/issues\",\n             owner = owner, repo = repo,\n             state = \"open\", .limit = Inf)\n\nfor (issue in issues) {\n  date &lt;- strsplit(issue[[\"updated_at\"]], \"T\")[[1]][1]\n  title &lt;- issue[[\"title\"]]\n  body &lt;- issue[[\"body\"]]\n  cat(paste0(\"### \", title,  \"\\n\\n\"), \n      paste0(date, \"\\n\\n\"),\n      body, \n      \"\\n\\n---\\n\\n\")\n}\n\n### A challenging consensus\n\n 2025-11-03\n\n Reading the consensus statements written by the chairs of SPI-M in the latest round of the Pegasus exercise (a simulated pandemic to test preparedness). Interestingly we have moved back to a champion/challenger format of modelling evidence synthesis. In this format, the UKHSA produces estimates for relevant policy questions, and SPI-M's role is to challenge based on expertise. Rather than comparing among modelling work equally, we have a kind of strong prior to be confronted and updated with other models/expertise.\n\n I can see a few implications for SPI-M in terms of the function, process, and outputs...\n\nFunction \n\n- does this model encourage less (or even less rigorous) quantitative work among spi-m? Not necessarily a bad - - thing- but when might we actually need multiple independent models, rather than critique? Are there some questions we should prioritise for challenge?\n\nProcess \n\n- should/how would we structure discussion to avoid an anchoring bias on UKHSA estimates (if we want to)?\n- how much disagreement/ in what form is needed to actually shift away from the UKHSA estimate?\n- if there were substantial disagreement, what would happen? (How strong should the prior be?)\n\nOutputs\n\n- do we write the consensus statement with the UKHSA estimates, or should these be adjusted based on other work, and if so how? \n- how is the language of consistency/conflict expressed, and interpreted, as with phrases validated for expressing a scale of uncertainty? (\"Other models were broadly consistent with\"?) \n\n---\n\n### ethical frameworks\n\n 2025-11-03\n\n thinking about evaluating modelling work and the 'wrong but useful' phrase (a massive cop out imo). In any case, this is a very utilitarian way of looking at models - usefulness as the object. What would other ethical frameworks imply for model evaluation? \n\n---\n\n### \"all models are wrong\" vs the serenity prayer\n\n 2025-10-30\n\n \"serenity to accept the things I cannot change,\nCourage to change the things I can,\nand Wisdom to know the difference\"\n\n\nhttps://en.wikipedia.org/wiki/Serenity_Prayer \n\n---\n\n### how many models does it take to change a lightbulb?\n\n 2025-10-30\n\n A: none, the models provided evidence not advice \n\nEntirely inappropriate joke because it implies policy is an object to be manipulated. but also a little grain of truth somewhere?/ as this is somewhat implied in \"evaluating usefulness\" without being explicit what the aim of being useful is. Hmm \n\n---\n\n### often wrong, never in doubt\n\n 2025-10-20\n\n (c) a Danny Truellism\n\n... and also a nice catchphrase for modelling evaluations\n\nCf. Box: always wrong, sometimes useful \n\n---\n\n### baselines / benchmarks\n\n 2025-10-12\n\n \n\n---\n\n### graceful degradation\n\n 2025-10-10\n\n what a wonderful term\nhttps://en.wikipedia.org/wiki/Fault_tolerance \n\n---\n\n### aria nausea\n\n 2025-09-29\n\n Reading about ARIA's Innovator Circles: https://aria.org.uk/innovator-circles\n\nConflicted because the idea of small group creativity/change is so precisely what I find fascinating and enjoyable and intellectually productive. And every other word in ARIA's description makes me want to puke. Silicon Valley speak is drowning out the idea, which is a pretty reasonable one, that a bit of open funding (and a flag of credibility to wave at evaluators) comes in handy to help groups get together.\n\nAlso, why describe an \"[experiment](https://ariaresearch.substack.com/p/innovator-circles-cultivating-the?r=2rdtmp&triedRedirect=true)\"? It's not, is it? After all, there's no [counterfactual](#5)... And they're trying to recruit scientists who one might expect to care about such a definition. So why? Why not just say it's a good old-fashioned \"pilot\"? \n\nAlso, this is really a sticking plaster on a broken leg in terms of barriers to bringing together small groups of similar interests. I am thinking academic competition, elitism, and accessibility to those outside the \"discipline\", let alone the academy.  \n\n---\n\n### Between baselines and counterfactuals\n\n 2025-09-28\n\n I dislike the framing of evaluating around a counterfactual. Maybe because it is so oddly specific in its extra-ordinary hypothetical world; it feels very frequentist. OTOH I find it much more helpful - intuitively and operationally -to think about baselines. \n\nThey are similar: \n- used to think about the impact of an intervention \n- in terms of an alternative without the intervention\n- typically hypothetical and retrospective in the type of social research setting I work in\n\nBut different \n- baseline= context \n- counterfactuals= binary\n- baseline allows for a dose response \n\nTo me, a baseline is more like describing a prior, so that the evaluation is searching for the posterior.  \n\n---\n\n### add work highlights\n\n 2025-09-25\n\n draft to start with\n\n&gt; #### A few recent highlights\n&gt; \n&gt; - Software engineering a [dashboard for humanitarian advocacy](https://cmmid.github.io/gaza-response/) in Gaza\n&gt; - Co-developing and [delivering](https://www.lshtm.ac.uk/newsevents/news/2024/cmmid-members-teach-nowcasting-and-forecasting-stockholm] an open-source training course on [Nowcasting & Forecasting Infectious Disease](https://nfidd.github.io/nfidd/) \n\n---\n\n### the \"matthew effect\"\n\n 2025-11-05\n\n The \"Matthew effect\" is the academic research equivalent of \"the rich get richer\". It's demonstrated pretty [widely](https://researchonresearch.org/largest-study-of-its-kind-shows-that-the-matthew-effect-in-science-funding-holds-true/) and [consistently](https://direct.mit.edu/qss/article/doi/10.1162/qss.a.16/132193) that researchers who win funds early on in their careers, continue to accumulate more funding over the rest of their career than those who missed out on early opportunities. \n\nI think this effect might be wildly intensified for those of us working in outbreak response research. Publishing an early estimate of some fundamental epidemiological characteristic results in a snowball of citations as an outbreak progresses. If funding decisions at least partly consider these citation metrics then we might expect a pretty outsized Matthew effect among researchers who publish early in an outbreak.\n\nProject proposal: use bibliometrics and/or funding data to trace career trajectories through and between outbreaks, among those who publish on outbreak response. \n\n---\n\n### my public library\n\n 2025-11-05\n\n I've made my zotero library public, available here.\n\nhttps://www.zotero.org/kathsherratt/library \n\n---"
+    "text": "(“Kath has Issues”)"
+  },
+  {
+    "objectID": "notes.html#ea",
+    "href": "notes.html#ea",
+    "title": "Kath Sherratt",
+    "section": "EA",
+    "text": "EA\n2025-11-13\nNote to self: troubles with EA - need to write this up because I keep needing a reference doc"
+  },
+  {
+    "objectID": "notes.html#pegasus-evaluation-relevance",
+    "href": "notes.html#pegasus-evaluation-relevance",
+    "title": "Kath Sherratt",
+    "section": "Pegasus evaluation relevance",
+    "text": "Pegasus evaluation relevance\n2025-11-13\n\nidentify each key output from spim consensus docs\nrate each for quality: Credibility of consensus estimate\ninternal modelling quality\nconsistency with individual estimate\nreflection of group discussion Relevance to policy Legitimacy of consensus process\n\nStructuring feedback - spi-m is intended to provide evidence to SAGE, IE reducing uncertainty, based on best available research - this takes several forms, including - parameter estimates for underlying epidemiology - short term now/forecasts - scenario projections\nThis can be evaluated in terms of - quality of evidence provided - robustness and legitimacy of process for evidence production"
+  },
+  {
+    "objectID": "notes.html#challengers-champions-and-consensus-in-spi-m-relevance",
+    "href": "notes.html#challengers-champions-and-consensus-in-spi-m-relevance",
+    "title": "Kath Sherratt",
+    "section": "challengers, champions, and consensus in SPI-M relevance",
+    "text": "challengers, champions, and consensus in SPI-M relevance\n2025-11-13\nReading the consensus statements written by the chairs of SPI-M in the latest round of the Pegasus exercise (a simulated pandemic to test preparedness). Interestingly we have moved back to a champion/challenger format of modelling evidence synthesis. In this format, the UKHSA produces estimates for relevant policy questions, and SPI-M’s role is to challenge based on expertise. Rather than comparing among modelling work equally, we have a kind of strong prior to be confronted and updated with other models/expertise.\nI can see a few implications for SPI-M in terms of the function, process, and outputs…\nFunction\n\ndoes this model encourage less (or even less rigorous) quantitative work among spi-m? Not necessarily a bad - - thing- but when might we actually need multiple independent models, rather than critique? Are there some questions we should prioritise for challenge?\n\nProcess\n\nshould/how would we structure discussion to avoid an anchoring bias on UKHSA estimates (if we want to)?\nhow much disagreement/ in what form is needed to actually shift away from the UKHSA estimate?\nif there were substantial disagreement, what would happen? (How strong should the prior be?)\n\nOutputs\n\ndo we write the consensus statement with the UKHSA estimates, or should these be adjusted based on other work, and if so how?\nhow is the language of consistency/conflict expressed, and interpreted, as with phrases validated for expressing a scale of uncertainty? (“Other models were broadly consistent with”?)"
+  },
+  {
+    "objectID": "notes.html#ethical-frameworks-legitimacy",
+    "href": "notes.html#ethical-frameworks-legitimacy",
+    "title": "Kath Sherratt",
+    "section": "ethical frameworks legitimacy",
+    "text": "ethical frameworks legitimacy\n2025-11-13\nthinking about evaluating modelling work and the ‘wrong but useful’ phrase (a massive cop out imo). In any case, this is a very utilitarian way of looking at models - usefulness as the object. What would other ethical frameworks imply for model evaluation?"
+  },
+  {
+    "objectID": "notes.html#often-wrong-never-in-doubt",
+    "href": "notes.html#often-wrong-never-in-doubt",
+    "title": "Kath Sherratt",
+    "section": "often wrong, never in doubt",
+    "text": "often wrong, never in doubt\n2025-10-20\n\na Danny Truellism\n\n… and also a nice catchphrase for modelling evaluations\nCf. Box: always wrong, sometimes useful"
+  },
+  {
+    "objectID": "notes.html#baselines-benchmarks-credibility",
+    "href": "notes.html#baselines-benchmarks-credibility",
+    "title": "Kath Sherratt",
+    "section": "baselines / benchmarks credibility",
+    "text": "baselines / benchmarks credibility\n2025-11-05"
+  },
+  {
+    "objectID": "notes.html#graceful-degradation-credibility",
+    "href": "notes.html#graceful-degradation-credibility",
+    "title": "Kath Sherratt",
+    "section": "graceful degradation credibility",
+    "text": "graceful degradation credibility\n2025-11-05\nwhat a wonderful term https://en.wikipedia.org/wiki/Fault_tolerance"
+  },
+  {
+    "objectID": "notes.html#aria-nausea-legitimacy",
+    "href": "notes.html#aria-nausea-legitimacy",
+    "title": "Kath Sherratt",
+    "section": "aria nausea legitimacy",
+    "text": "aria nausea legitimacy\n2025-11-05\nReading about ARIA’s Innovator Circles: https://aria.org.uk/innovator-circles\nConflicted because the idea of small group creativity/change is so precisely what I find fascinating and enjoyable and intellectually productive. And every other word in ARIA’s description makes me want to puke. Silicon Valley speak is drowning out the idea, which is a pretty reasonable one, that a bit of open funding (and a flag of credibility to wave at evaluators) comes in handy to help groups get together.\nAlso, why describe an “experiment”? It’s not, is it? After all, there’s no counterfactual… And they’re trying to recruit scientists who one might expect to care about such a definition. So why? Why not just say it’s a good old-fashioned “pilot”?\nAlso, this is really a sticking plaster on a broken leg in terms of barriers to bringing together small groups of similar interests. I am thinking academic competition, elitism, and accessibility to those outside the “discipline”, let alone the academy."
+  },
+  {
+    "objectID": "notes.html#between-baselines-and-counterfactuals-credibility",
+    "href": "notes.html#between-baselines-and-counterfactuals-credibility",
+    "title": "Kath Sherratt",
+    "section": "Between baselines and counterfactuals credibility",
+    "text": "Between baselines and counterfactuals credibility\n2025-11-05\nI dislike the framing of evaluating around a counterfactual. Maybe because it is so oddly specific in its extra-ordinary hypothetical world; it feels very frequentist. OTOH I find it much more helpful - intuitively and operationally -to think about baselines.\nThey are similar: - used to think about the impact of an intervention - in terms of an alternative without the intervention - typically hypothetical and retrospective in the type of social research setting I work in\nBut different - baseline= context - counterfactuals= binary - baseline allows for a dose response\nTo me, a baseline is more like describing a prior, so that the evaluation is searching for the posterior."
+  },
+  {
+    "objectID": "notes.html#add-work-highlights",
+    "href": "notes.html#add-work-highlights",
+    "title": "Kath Sherratt",
+    "section": "add work highlights",
+    "text": "add work highlights\n2025-09-25\ndraft to start with\n\nA few recent highlights\n\nSoftware engineering a dashboard for humanitarian advocacy in Gaza\nCo-developing and [delivering](https://www.lshtm.ac.uk/newsevents/news/2024/cmmid-members-teach-nowcasting-and-forecasting-stockholm] an open-source training course on Nowcasting & Forecasting Infectious Disease"
+  },
+  {
+    "objectID": "notes.html#the-matthew-effect-legitimacy",
+    "href": "notes.html#the-matthew-effect-legitimacy",
+    "title": "Kath Sherratt",
+    "section": "the “matthew effect” legitimacy",
+    "text": "the “matthew effect” legitimacy\n2025-11-05\nThe “Matthew effect” is the academic research equivalent of “the rich get richer”. It’s demonstrated pretty widely and consistently that researchers who win funds early on in their careers, continue to accumulate more funding over the rest of their career than those who missed out on early opportunities.\nI think this effect might be wildly intensified for those of us working in outbreak response research. Publishing an early estimate of some fundamental epidemiological characteristic results in a snowball of citations as an outbreak progresses. If funding decisions at least partly consider these citation metrics then we might expect a pretty outsized Matthew effect among researchers who publish early in an outbreak.\nProject proposal: use bibliometrics and/or funding data to trace career trajectories through and between outbreaks, among those who publish on outbreak response."
+  },
+  {
+    "objectID": "notes.html#my-public-library",
+    "href": "notes.html#my-public-library",
+    "title": "Kath Sherratt",
+    "section": "my public library",
+    "text": "my public library\n2025-11-05\nI’ve made my zotero library public, available here.\nhttps://www.zotero.org/kathsherratt/library"
   },
   {
     "objectID": "index.html",
