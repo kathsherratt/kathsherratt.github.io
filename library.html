@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Library – Kath Sherratt</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ccd81253fefb92e9cd3f9eb5b5d87b54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Library – Kath Sherratt">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Kath Sherratt">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kath Sherratt</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./notes.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Library</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>My reference library is publicly available on <a href="https://www.zotero.org/kathsherratt/library">Zotero</a>.</p>
+<p>This is a collection of some of my own favourite papers.</p>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>zotero <span class="ot">&lt;-</span> <span class="st">"https://api.zotero.org/"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>userid <span class="ot">&lt;-</span> <span class="st">"users/5456110"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>favourites <span class="ot">&lt;-</span> <span class="st">"/collections/2KRQXA3T/items/top"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>params <span class="ot">&lt;-</span> <span class="st">"?format=bib&amp;style=feminist-economics&amp;linkwrap=1&amp;locale=en-GB"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>bib <span class="ot">&lt;-</span> <span class="fu">readLines</span>(curl<span class="sc">::</span><span class="fu">curl</span>(<span class="fu">paste0</span>(zotero, userid, favourites, params)))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(bib)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<!--?xml version="1.0"?-->
+<div class="csl-bib-body" style="line-height: 1.35; padding-left: 1em; text-indent:-1em;" role="list">
+<div class="csl-entry" role="listitem">
+Abbott, Sam, Katharine Sherratt, Nikos Bosse, Hugo Gruson, Johannes Bracher, and Sebastian Funk. 2022. “Evaluating an Epidemiologically Motivated Surrogate Model of a Multi-Model Ensemble.” medRxiv. doi:<a href="https://doi.org/10.1101/2022.10.12.22280917">10.1101/2022.10.12.22280917</a>.
+</div>
+<div class="csl-entry" role="listitem">
+“An Introduction to Systematic Reviews.” 2025. <i>SAGE Publications Ltd</i>. <a href="https://uk.sagepub.com/en-gb/eur/an-introduction-to-systematic-reviews/book245742">https://uk.sagepub.com/en-gb/eur/an-introduction-to-systematic-reviews/book245742</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Asthana, Sumegha, Sanjana Mukherjee, Alexandra L. Phelan, Ibrahim B. Gobir, J. J. Woo, Clare Wenham, Mohammad Mushtuq Husain, et al.&nbsp;2025. “Decision-Making under Epistemic, Strategic and Institutional Uncertainty during COVID-19: Findings from a Six-Country Empirical Study.” <i>BMJ Global Health</i> 10 (2). doi:<a href="https://doi.org/10.1136/bmjgh-2024-018124">10.1136/bmjgh-2024-018124</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Atkinson, Paul, Hayley Mableson, Sally Sheard, Anne-Marie Martindale, Tom Solomon, Aleksandra Borek, and Caitlin Pilbeam. 2022. “How Did UK Policymaking in the COVID-19 Response Use Science? Evidence from Scientific Advisers.” <i>Evidence &amp; Policy</i> 18 (4): 633–650. doi:<a href="https://doi.org/10.1332/174426421X16388976414615">10.1332/174426421X16388976414615</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Boden, Lisa A., and Iain J. McKendrick. 2017. “Model-Based Policymaking: A Framework to Promote Ethical ‘Good Practice’ in Mathematical Modeling for Public Health Policymaking.” <i>Frontiers in Public Health</i> 5: 68. doi:<a href="https://doi.org/10.3389/fpubh.2017.00068">10.3389/fpubh.2017.00068</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Box, George. 1979. “Robustness in the Strategy of Scientific Model Building.,” January, 201–236. doi:<a href="https://doi.org/10.1016/B978-0-12-438150-6.50018-2">10.1016/B978-0-12-438150-6.50018-2</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Breznau, Nate, Eike Mark Rinke, Alexander Wuttke, Hung H. V. Nguyen, Muna Adem, Jule Adriaans, Amalia Alvarez-Benjumea, et al.&nbsp;2022. “Observing Many Researchers Using the Same Data and Hypothesis Reveals a Hidden Universe of Uncertainty.” <i>Proceedings of the National Academy of Sciences</i> 119 (44): e2203150119. doi:<a href="https://doi.org/10.1073/pnas.2203150119">10.1073/pnas.2203150119</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Calder, Muffy, Claire Craig, Dave Culley, Richard de Cani, Christl A. Donnelly, Rowan Douglas, Bruce Edmonds, et al.&nbsp;2018. “Computational Modelling for Decision-Making: Where, Why, What, Who and How.” <i>Royal Society Open Science</i> 5 (6): 172096. doi:<a href="https://doi.org/10.1098/rsos.172096">10.1098/rsos.172096</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Carlson, Colin J., Eric Dougherty, Mike Boots, Wayne Getz, and Sadie J. Ryan. 2018. “Consensus and Conflict among Ecological Forecasts of Zika Virus Outbreaks in the United States.” <i>Scientific Reports</i> 8 (1): 4921. doi:<a href="https://doi.org/10.1038/s41598-018-22989-0">10.1038/s41598-018-22989-0</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Chalmers, Iain, Larry V. Hedges, and Harris Cooper. 2002. “A Brief History of Research Synthesis.” <i>Evaluation &amp; the Health Professions</i> 25 (1): 12–37. doi:<a href="https://doi.org/10.1177/0163278702025001003">10.1177/0163278702025001003</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Charniga, Kelly, Sang Woo Park, Andrei R. Akhmetzhanov, Anne Cori, Jonathan Dushoff, Sebastian Funk, Katelyn M. Gostic, et al.&nbsp;2024. “Best Practices for Estimating and Reporting Epidemiological Delay Distributions of Infectious Diseases.” <i>PLOS Computational Biology</i> 20 (10): e1012520. doi:<a href="https://doi.org/10.1371/journal.pcbi.1012520">10.1371/journal.pcbi.1012520</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Christley, Robert M., Maggie Mort, Brian Wynne, Jonathan M. Wastling, A. Louise Heathwaite, Roger Pickup, Zoë Austin, and Sophia M. Latham. 2013. “‘Wrong, but Useful’: Negotiating Uncertainty in Infectious Disease Modelling.” <i>PLOS ONE</i> 8 (10): e76277. doi:<a href="https://doi.org/10.1371/journal.pone.0076277">10.1371/journal.pone.0076277</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Clyne, Barbara, Lisa Hynes, Colette Kirwan, Máire McGeehan, Paula Byrne, Martha Killilea, Susan M. Smith, et al.&nbsp;2023. “Perspectives on the Production, and Use, of Rapid Evidence in Decision Making during the COVID-19 Pandemic: A Qualitative Study.” <i>BMJ Evidence-Based Medicine</i> 28 (1): 48–57. doi:<a href="https://doi.org/10.1136/bmjebm-2021-111905">10.1136/bmjebm-2021-111905</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Coughlan de Perez, Erin, Elisabeth Stephens, Maarten van Aalst, Juan Bazo, Eleonore Fournier-Tombs, Sebastian Funk, Jeremy J. Hess, Nicola Ranger, and Rachel Lowe. 2022. “Epidemiological versus Meteorological Forecasts: Best Practice for Linking Models to Policymaking.” <i>International Journal of Forecasting</i> 38 (2): 521–526. doi:<a href="https://doi.org/10.1016/j.ijforecast.2021.08.003">10.1016/j.ijforecast.2021.08.003</a>.
+</div>
+<div class="csl-entry" role="listitem">
+De Angelis, Daniela, Anne M. Presanis, Paul J. Birrell, Gianpaolo Scalia Tomba, and Thomas House. 2015. “Four Key Challenges in Infectious Disease Modelling Using Data from Multiple Sources.” <i>Epidemics</i>, Challenges in Modelling Infectious DIsease Dynamics, 10 (March): 83–87. doi:<a href="https://doi.org/10.1016/j.epidem.2014.09.004">10.1016/j.epidem.2014.09.004</a>.
+</div>
+<div class="csl-entry" role="listitem">
+den Boon, Saskia, Mark Jit, Marc Brisson, Graham Medley, Philippe Beutels, Richard White, Stefan Flasche, et al.&nbsp;2019. “Guidelines for Multi-Model Comparisons of the Impact of Infectious Disease Interventions.” <i>BMC Medicine</i> 17 (1): 163. doi:<a href="https://doi.org/10.1186/s12916-019-1403-9">10.1186/s12916-019-1403-9</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Doms, Colin, Sarah C. Kramer, and Jeffrey Shaman. 2018. “Assessing the Use of Influenza Forecasts and Epidemiological Modeling in Public Health Decision Making in the United States.” <i>Scientific Reports</i> 8 (1): 12406. doi:<a href="https://doi.org/10.1038/s41598-018-30378-w">10.1038/s41598-018-30378-w</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Fraser, Christophe, Steven Riley, Roy M. Anderson, and Neil M. Ferguson. 2004. “Factors That Make an Infectious Disease Outbreak Controllable.” <i>Proceedings of the National Academy of Sciences</i> 101 (16): 6146–6151. doi:<a href="https://doi.org/10.1073/pnas.0307506101">10.1073/pnas.0307506101</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Glasser, John W., Nathaniel Hupert, Mary M. McCauley, and Richard Hatchett. 2011. “Modeling and Public Health Emergency Responses: Lessons from SARS.” <i>Epidemics</i> 3 (1): 32–37. doi:<a href="https://doi.org/10.1016/j.epidem.2011.01.001">10.1016/j.epidem.2011.01.001</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Gyllingberg, Linnéa, Abeba Birhane, and David J. T. Sumpter. 2023. “The Lost Art of Mathematical Modelling.” <i>Mathematical Biosciences</i> 362 (August): 109033. doi:<a href="https://doi.org/10.1016/j.mbs.2023.109033">10.1016/j.mbs.2023.109033</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Hadley, Liza, Caylyn Rich, Alex Tasker, Olivier Restif, and Sebastian Funk. 2025. “How Does Policy Modelling Work in Practice? A Global Analysis on the Use of Epidemiological Modelling in Health Crises.” medRxiv. doi:<a href="https://doi.org/10.1101/2024.08.12.24311899">10.1101/2024.08.12.24311899</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Hall, Kara, Amanda Vogel, Grace Huang, Katrina Serrano, Elise Rice, Sophia Tsakraklides, and Stephen Fiore. 2018. “The Science of Team Science: A Review of the Empirical Evidence and Research Gaps on Collaboration in Science.” <i>American Psychologist</i> 73 (May): 532–548. doi:<a href="https://doi.org/10.1037/amp0000319">10.1037/amp0000319</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Hollingsworth, T. D., and G. F. Medley. 2017. “Learning from Multi-Model Comparisons: Collaboration Leads to Insights, but Limitations Remain.” <i>Epidemics</i>, Multi-model comparisons for neglected tropical diseases - validation and projection, 18 (March): 1–3. doi:<a href="https://doi.org/10.1016/j.epidem.2017.02.014">10.1016/j.epidem.2017.02.014</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Jebeile, Julie, and Anouk Barberousse. 2021. “Model Spread and Progress in Climate Modelling.” <i>European Journal for Philosophy of Science</i> 11 (3): 66. doi:<a href="https://doi.org/10.1007/s13194-021-00387-0">10.1007/s13194-021-00387-0</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Jorm, Anthony. 2025. <i>Expert Consensus in Science</i>. Springer Nature. doi:<a href="https://doi.org/10.1007/978-981-97-9222-1">10.1007/978-981-97-9222-1</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Kim, Minsu, Evan L. Ray, and Nicholas G. Reich. 2024. “Beyond Forecast Leaderboards: Measuring Individual Model Importance Based on Contribution to Ensemble Accuracy.” arXiv. doi:<a href="https://doi.org/10.48550/arXiv.2412.08916">10.48550/arXiv.2412.08916</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Kuma, Peter, Frida A.-M. Bender, and Aiden R. Jönsson. 2023. “Climate Model Code Genealogy and Its Relation to Climate Feedbacks and Sensitivity.” <i>Journal of Advances in Modeling Earth Systems</i> 15 (7): e2022MS003588. doi:<a href="https://doi.org/10.1029/2022MS003588">10.1029/2022MS003588</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Laurenz Langer, Janice Tripney, and David Gough. 2025. <i>The Science of Using Science: Researching the Use of Research Evidence in Decision-Making</i>. London: EPPI-Centre, Social Science Research Unit, UCL Institute of Education, University College London. Accessed June 10. <a href="https://eppi.ioe.ac.uk/cms/Default.aspx?tabid=3504">https://eppi.ioe.ac.uk/cms/Default.aspx?tabid=3504</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Lawrence, Michael, Paul Goodwin, Marcus O’Connor, and Dilek Önkal. 2006. “Judgmental Forecasting: A Review of Progress over the Last 25&nbsp; Years.” <i>International Journal of Forecasting</i>, Twenty five years of forecasting, 22 (3): 493–518. doi:<a href="https://doi.org/10.1016/j.ijforecast.2006.03.007">10.1016/j.ijforecast.2006.03.007</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Leach, Melissa, and Ian Scoones. 2013. “The Social and Political Lives of Zoonotic Disease Models: Narratives, Science and Policy.” <i>Social Science &amp; Medicine</i> 88 (July): 10–17. doi:<a href="https://doi.org/10.1016/j.socscimed.2013.03.017">10.1016/j.socscimed.2013.03.017</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Leith, Peat, Marcus Haward, Chris Rees, and Emily Ogier. 2016. “Success and Evolution of a Boundary Organization.” <i>Science, Technology, &amp; Human Values</i> 41 (3): 375–401. doi:<a href="https://doi.org/10.1177/0162243915601900">10.1177/0162243915601900</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Lipsitch, Marc, Lyn Finelli, Richard T. Heffernan, Gabriel M. Leung, and Stephen C. Redd. 2011. “Improving the Evidence Base for Decision Making During a Pandemic: The Example of 2009 Influenza A/H1N1.” <i>Biosecurity and Bioterrorism : Biodefense Strategy, Practice, and Science</i> 9 (2): 89–115. doi:<a href="https://doi.org/10.1089/bsp.2011.0007">10.1089/bsp.2011.0007</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Mansley, L. M., A. I. Donaldson, M. V. Thrusfield, and N. Honhold. 2011. “Destructive Tension: Mathematics versus Experience–the Progress and Control of the 2001 Foot and Mouth Disease Epidemic in Great Britain.” <i>Revue Scientifique Et Technique (International Office of Epizootics)</i> 30 (2): 483–498. doi:<a href="https://doi.org/10.20506/rst.30.2.2054">10.20506/rst.30.2.2054</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Masson, D., and R. Knutti. 2011. “Climate Model Genealogy.” <i>Geophysical Research Letters</i> 38 (8). doi:<a href="https://doi.org/10.1029/2011GL046864">10.1029/2011GL046864</a>.
+</div>
+<div class="csl-entry" role="listitem">
+McCabe, Ruth, and Christl A. Donnelly. 2021. “Disease Transmission and Control Modelling at the Science–Policy Interface.” <i>Interface Focus</i> 11 (6): 20210013. doi:<a href="https://doi.org/10.1098/rsfs.2021.0013">10.1098/rsfs.2021.0013</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Medley, Graham F. 2022. “A Consensus of Evidence: The Role of SPI-M-O in the UK COVID-19 Response.” <i>Advances in Biological Regulation</i> 86 (December): 100918. doi:<a href="https://doi.org/10.1016/j.jbior.2022.100918">10.1016/j.jbior.2022.100918</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Metcalf, C. J. E., W. J. Edmunds, and J. Lessler. 2015. “Six Challenges in Modelling for Public Health Policy.” <i>Epidemics</i>, Challenges in Modelling Infectious DIsease Dynamics, 10 (March): 93–96. doi:<a href="https://doi.org/10.1016/j.epidem.2014.08.008">10.1016/j.epidem.2014.08.008</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Moore, Mackenzie, Hailey Robertson, David Rosado, Ellie Graeden, Colin J. Carlson, and Rebecca Katz. 2024. “Core Components of Infectious Disease Outbreak Response.” <i>SSM - Health Systems</i> 3 (December): 100030. doi:<a href="https://doi.org/10.1016/j.ssmhs.2024.100030">10.1016/j.ssmhs.2024.100030</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Morgan, M. Granger. 2014. “Use (and Abuse) of Expert Elicitation in Support of Decision Making for Public Policy.” <i>Proceedings of the National Academy of Sciences</i> 111 (20): 7176–7184. doi:<a href="https://doi.org/10.1073/pnas.1319946111">10.1073/pnas.1319946111</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Morgan, Oliver. 2019. “How Decision Makers Can Use Quantitative Approaches to Guide Outbreak Responses.” <i>Philosophical Transactions of the Royal Society B: Biological Sciences</i> 374 (1776): 20180365. doi:<a href="https://doi.org/10.1098/rstb.2018.0365">10.1098/rstb.2018.0365</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Nixon, Kristen, Sonia Jindal, Felix Parker, Maximilian Marshall, Nicholas G. Reich, Kimia Ghobadi, Elizabeth C. Lee, Shaun Truelove, and Lauren Gardner. 2022. “Real-Time COVID-19 Forecasting: Challenges and Opportunities of Model Performance and Translation.” <i>The Lancet Digital Health</i> 4 (10): e699–e701. doi:<a href="https://doi.org/10.1016/S2589-7500(22)00167-4">10.1016/S2589-7500(22)00167-4</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Owek, Collins J., Fatuma Guleid, Justinah K. Maluni, Joyline Jepkosgei, Vincent Were, So Yoon Sim, Raymond Hutubessy, Brittany L. Hagedorn, Jacinta Nzinga, and Jacquie N. Oliwa. 2024. “Lessons Learned from Covid-19 Modelling Efforts for Policy Decision-Making in Lower- and Middle-Income Countries.” medRxiv. doi:<a href="https://doi.org/10.1101/2024.01.30.24301978">10.1101/2024.01.30.24301978</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Palmer, Joseph, Katharine Sherratt, Richard Martin-Nielsen, Jonnie Bevan, Hamish Gibbs, Cmmid COVID-19 Working Group, Sebastian Funk, and Sam Abbott. 2021. “Covidregionaldata: Subnational Data for COVID-19 Epidemiology.” <i>Journal of Open Source Software</i> 6 (63): 3290. doi:<a href="https://doi.org/10.21105/joss.03290">10.21105/joss.03290</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Parkhurst, Justin O., and Sudeepa Abeysinghe. 2016. “What Constitutes ‘Good’ Evidence for Public Health and Social Policy-Making? From Hierarchies to Appropriateness.” <i>Social Epistemology</i> 30 (5–6): 665–679. doi:<a href="https://doi.org/10.1080/02691728.2016.1172365">10.1080/02691728.2016.1172365</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Pollett, Simon, Michael Johansson, Matthew Biggerstaff, Lindsay C. Morton, Sara L. Bazaco, David M. Brett Major, Anna M. Stewart-Ibarra, et al.&nbsp;2020. “Identification and Evaluation of Epidemic Prediction and Forecasting Reporting Guidelines: A Systematic Review and a Call for Action.” <i>Epidemics</i> 33 (December): 100400. doi:<a href="https://doi.org/10.1016/j.epidem.2020.100400">10.1016/j.epidem.2020.100400</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Probert, William J. M., Katriona Shea, Christopher J. Fonnesbeck, Michael C. Runge, Tim E. Carpenter, Salome Dürr, M. Graeme Garner, et al.&nbsp;2016. “Decision-Making for Foot-and-Mouth Disease Control: Objectives Matter.” <i>Epidemics</i> 15 (June): 10–19. doi:<a href="https://doi.org/10.1016/j.epidem.2015.11.002">10.1016/j.epidem.2015.11.002</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Redd, Stephen C., and Thomas R. Frieden. 2017. “CDC’s Evolving Approach to Emergency Response.” <i>Health Security</i> 15 (1): 41–52. doi:<a href="https://doi.org/10.1089/hs.2017.0006">10.1089/hs.2017.0006</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Reich, Nicholas G., Trish M. Perl, Derek A. T. Cummings, and Justin Lessler. 2011. “Visualizing Clinical Evidence: Citation Networks for the Incubation Periods of Respiratory Viral Infections.” <i>PLOS ONE</i> 6 (4): e19496. doi:<a href="https://doi.org/10.1371/journal.pone.0019496">10.1371/journal.pone.0019496</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Salajan, Andreea, Svetla Tsolova, Massimo Ciotti, and Jonathan E. Suk. 2020. “To What Extent Does Evidence Support Decision Making during Infectious Disease Outbreaks? A Scoping Literature Review.” <i>Evidence &amp; Policy</i> 16 (3): 453–475. doi:<a href="https://doi.org/10.1332/174426420X15808913064302">10.1332/174426420X15808913064302</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Scarpino, Samuel V., and Giovanni Petri. 2019. “On the Predictability of Infectious Disease Outbreaks.” <i>Nature Communications</i> 10 (1): 898. doi:<a href="https://doi.org/10.1038/s41467-019-08616-0">10.1038/s41467-019-08616-0</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Sherratt, Katharine, Sam Abbott, Sophie R. Meakin, Joel Hellewell, James D. Munday, Nikos Bosse, Mark Jit, and Sebastian Funk. 2021. “Exploring Surveillance Data Biases When Estimating the Reproduction Number: With Insights into Subpopulation Transmission of COVID-19 in England.” <i>Philosophical Transactions of the Royal Society B: Biological Sciences</i> 376 (1829): 20200283. doi:<a href="https://doi.org/10.1098/rstb.2020.0283">10.1098/rstb.2020.0283</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Sherratt, Katharine, AC Carnegie, A Kucharski, A Cori, CAB Pearson, CI Jarvis, C Overton, et al.&nbsp;2024. “Improving Modelling for Epidemic Responses: Reflections from Members of the UK Infectious Disease Modelling Community on Their Experiences during the COVID-19 Pandemic.” <i>Wellcome Open Research</i> 9 (12). doi:<a href="https://doi.org/10.12688/wellcomeopenres.19601.1">10.12688/wellcomeopenres.19601.1</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Sherratt, Katharine, Rok Grah, Bastian Prasse, Sam Abbott, and Sebastian Funk. 2024. “The Influence of Methodology and Location Specificity on Epidemic Forecast Accuracy among European COVID-19 Forecasts.” Manuscript.
+</div>
+<div class="csl-entry" role="listitem">
+Sherratt, Katharine, Hugo Gruson, Rok Grah, Helen Johnson, Rene Niehus, Bastian Prasse, Frank Sandmann, et al.&nbsp;2023. “Predictive Performance of Multi-Model Ensemble Forecasts of COVID-19 across European Nations.” Edited by Amy Wesolowski, Neil M Ferguson, Jeffrey L Shaman, and Sen Pei. <i>eLife</i> 12 (April): e81916. doi:<a href="https://doi.org/10.7554/eLife.81916">10.7554/eLife.81916</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Sherratt, Katharine, Ajitesh Srivastava, Kylie Ainslie, David E. Singh, Aymar Cublier, Maria Cristina Marinescu, Jesus Carretero, et al.&nbsp;2024. “Characterising Information Gains and Losses When Collecting Multiple Epidemic Model Outputs.” <i>Epidemics</i>, March, 100765. doi:<a href="https://doi.org/10.1016/j.epidem.2024.100765">10.1016/j.epidem.2024.100765</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Slauter, Will. 2011. “WRITE UP YOUR DEAD.” <i>Media History</i> 17 (1): 1–15. doi:<a href="https://doi.org/10.1080/13688804.2011.532371">10.1080/13688804.2011.532371</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Soll, Jack B., and Richard P. Larrick. 2009. “Strategies for Revising Judgment: How (and How Well) People Use Others’ Opinions.” <i>Journal of Experimental Psychology: Learning, Memory, and Cognition</i> 35 (3): 780–805. doi:<a href="https://doi.org/10.1037/a0015145">10.1037/a0015145</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Tariq, Mehreen, Margaret Haworth-Brockman, and Seyed M. Moghadas. 2021. “Ten Years of Pan-InfORM: Modelling Research for Public Health in Canada.” <i>AIMS Public Health</i> 8 (2): 265–274. doi:<a href="https://doi.org/10.3934/publichealth.2021020">10.3934/publichealth.2021020</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Thomas, Keith. 2003. <i>Religion and the Decline of Magic</i>. <a href="https://www.penguin.co.uk/books/13672/religion-and-the-decline-of-magic-by-keith-thomas/9780140137446">https://www.penguin.co.uk/books/13672/religion-and-the-decline-of-magic-by-keith-thomas/9780140137446</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Tricco, Andrea C., Jennifer Tetzlaff, and David Moher. 2011. “The Art and Science of Knowledge Synthesis.” <i>Journal of Clinical Epidemiology</i> 64 (1): 11–20. doi:<a href="https://doi.org/10.1016/j.jclinepi.2009.11.007">10.1016/j.jclinepi.2009.11.007</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Valdez, Jose W., Sandeep Sharma, and John Gould. 2025. “Systemic Territoriality in Academia: The Gollum Effect’s Impact on Scientific Research and Careers.” <i>One Earth</i>, May, 101314. doi:<a href="https://doi.org/10.1016/j.oneear.2025.101314">10.1016/j.oneear.2025.101314</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Van Kerkhove, Maria D., and Neil M. Ferguson. 2012. “Epidemic and Intervention Modelling–a Scientific Rationale for Policy Decisions? Lessons from the 2009 Influenza Pandemic.” <i>Bulletin of the World Health Organization</i> 90 (4): 306–310. doi:<a href="https://doi.org/10.2471/BLT.11.097949">10.2471/BLT.11.097949</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Vegvari, Carolin, Sam Abbott, Frank Ball, Ellen Brooks-Pollock, Robert Challen, Benjamin S Collyer, Ciara Dangerfield, et al.&nbsp;2022. “Commentary on the Use of the Reproduction Number R during the COVID-19 Pandemic.” <i>Statistical Methods in Medical Research</i> 31 (9): 1675–1685. doi:<a href="https://doi.org/10.1177/09622802211037079">10.1177/09622802211037079</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Whitty, Christopher J. M. 2015. “What Makes an Academic Paper Useful for Health Policy?” <i>BMC Medicine</i> 13 (December): 301. doi:<a href="https://doi.org/10.1186/s12916-015-0544-8">10.1186/s12916-015-0544-8</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Yardley, Elizabeth, and Fotios Petropoulos. 2021. “Beyond Error Measures to the Utility and Cost of the Forecasts.” <i>Foresight: The International Journal of Applied Forecasting</i>, no. 63: 36–45. <a href="https://econpapers.repec.org/article/forijafaa/y_3a2021_3ai_3a63_3ap_3a36-45.htm">https://econpapers.repec.org/article/forijafaa/y_3a2021_3ai_3a63_3ap_3a36-45.htm</a>.
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/kathsherratt\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
