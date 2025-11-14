@@ -262,8 +262,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./notes.html"> 
 <span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./library.html"> 
+<span class="menu-text">Library</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -303,7 +311,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
   <div class="about-contents"><main class="content" id="quarto-document-content">
 
-<p>I’m Kath, a researcher working on real-time epidemiological analysis. I focus on mathematical modelling during infectious disease outbreaks. I’m especially interested in model evaluation, comparison, and combination. My work is openly available by default.</p>
+<p>I’m Kath, a researcher working on real-time epidemiological analysis. I focus on quantitative modelling as a way of supporting public health decisions to control infectious disease outbreaks. I’m especially interested in model evaluation, comparison, and combination. My work is openly available by default.</p>
 <p>I work in the <a href="https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases">Centre for Mathematical Modelling of Infectious Disease</a> in London, based in the <a href="https://epiforecasts.io/">epiforecasts</a> group. I’m also a happy Londoner, a feminist, and a <a href="https://www.albertatra.org/alberta-fruit-commons">community gardener</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="My work">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -317,12 +325,12 @@ My work
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>My core interest is in rapid evidence synthesis for public health decision-making. I focus on using quantitative modelling to understand infectious disease dynamics, with particular experience in real-time forecasting.</p>
+<p>I focus on using quantitative modelling to understand infectious disease dynamics, with specific experience in real-time forecasting. I’m particularly interested in evaluating evidence synthesis and expert advice in public health policy.</p>
 <p>My work includes</p>
 <ul>
 <li>methods for model evaluation, comparison, and combination (ensemble modelling)</li>
 <li>combining scientific judgements through expert elicitation and consensus forming</li>
-<li>evaluating the strengths, weaknesses, and trade-offs in scientific advisory groups that operate within the resource constraints of emergency response.</li>
+<li>evaluating the strengths and weaknesses of modelling-based scientific advice</li>
 </ul>
 <p>I currently lead a theme of work around outbreak response at LSHTM. I teach across modules in epidemiology and data science, and advocate for an inclusive working environment at my institution, focussing on disability.</p>
 <p>I previously worked on the COVID-19 response, contributing to the UK’s Scientific Advisory Group for Emergencies and building modelling infrastructure for the European Centre for Disease Prevention and Control. Before training in epidemiology, I worked at the Wellcome Trust across both science funding and the multi-asset investment portfolio.</p>
@@ -375,6 +383,9 @@ Contact
 </div>
 </div>
 </div>
+<hr>
+<p><img src="https://ghchart.rshah.org/kathsherratt" alt="Github contributions"></p>
+<p><em><a href="https://github.com/kathsherratt">Software contributions</a></em></p>
 
 
 </main></div>
@@ -458,7 +469,7 @@ Contact
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/kathsherratt\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
