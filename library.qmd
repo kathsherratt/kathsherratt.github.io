@@ -1,0 +1,28 @@
+---
+title: "Library"
+format: html
+code-fold: true
+toc: true
+toc-depth: 2
+---
+
+My reference library is publicly available on [Zotero](https://www.zotero.org/kathsherratt/library).
+
+Below is a collection of some of my favourite papers.
+
+::: {.callout-info title="Favourites" collapse="true"}
+```{r, results='asis'}
+zotero <- "https://api.zotero.org/"
+userid <- "users/5456110/"
+favourites <- "collections/2KRQXA3T/items/top"
+params <- "?format=bib&style=feminist-economics&linkwrap=1&locale=en-GB"
+
+tryCatch({
+  bib <- readLines(curl::curl(paste0(zotero, userid, favourites, params)))
+  cat(bib)
+}, error = function(e) {
+  cat("Unable to load favourite papers from Zotero. Please visit my [library](https://www.zotero.org/kathsherratt/library) directly.\n\n")
+  cat("Error: ", conditionMessage(e), "\n")
+})
+```
+:::

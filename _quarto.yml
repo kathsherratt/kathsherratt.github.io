@@ -8,8 +8,12 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: research.qmd
+        text: Research
       - href: notes.qmd
         text: Notes
+      - href: library.qmd
+        text: Library
 
 format:
   html:

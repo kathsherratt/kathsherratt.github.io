@@ -1,0 +1,45 @@
+---
+title: "Research"
+format: html
+code-fold: true
+toc: true
+toc-depth: 2
+---
+
+I work in the [Centre for Mathematical Modelling of Infectious Disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases) at the [LSHTM](https://www.lshtm.ac.uk) in London. I've been based in the [epiforecasts](https://epiforecasts.io/) group since 2020. 
+
+<img src="https://ghchart.rshah.org/kathsherratt" alt="Github contributions" />
+
+::: {.column-margin}
+
+### Software
+
+Software development that I've led or substantially contributed to include:
+
+- [Gaza nutrition dashboard](https://cmmid.github.io/gaza-response/)
+- [Nowcasting and Forecasting of Infectious Disease Dynamics](https://nfidd.github.io/nfidd/)
+- The [European Modelling Hubs](https://modelling-hubs.ecdc.europa.eu/), specifically
+  - [The European COVID-19 Forecast Hub](https://covid19forecasthub.eu/)
+  - [The European COVID-19 Scenario Hub](https://covid19scenariohub.eu/)
+- [covidregionaldata](https://epiforecasts.io/covidregionaldata/)
+
+All research code is associated with a [Github](https://github.com/kathsherratt) repository, typically under the [epiforecasts](https://github.com/epiforecasts/) organisation.
+:::
+
+### Selected publications
+
+```{r, results='asis'}
+zotero <- "https://api.zotero.org/"
+userid <- "users/5456110/"
+pubs <- "collections/Z3HDMSU9/items/top"
+params <- "?format=bib&style=feminist-economics&linkwrap=1&locale=en-GB"
+
+tryCatch({
+  bib <- readLines(curl::curl(paste0(zotero, userid, pubs, params)))
+  cat(bib)
+}, error = function(e) {
+  cat("Unable to load publications from Zotero. Please visit my [Google Scholar](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en) or [Zotero library](https://www.zotero.org/kathsherratt/library) directly.\n\n")
+  cat("Error: ", conditionMessage(e), "\n")
+})
+```
+
