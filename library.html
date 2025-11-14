@@ -317,8 +317,16 @@ div.csl-indent {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./notes.html"> 
 <span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./library.html" aria-current="page"> 
+<span class="menu-text">Library</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -359,23 +367,27 @@ div.csl-indent {
 
 
 <p>My reference library is publicly available on <a href="https://www.zotero.org/kathsherratt/library">Zotero</a>.</p>
-<p>This is a collection of some of my own favourite papers.</p>
+<p>Below is a collection of some of my favourite papers.</p>
+<div class="callout-info" title="Favourites" data-collapse="true">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>zotero <span class="ot">&lt;-</span> <span class="st">"https://api.zotero.org/"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>userid <span class="ot">&lt;-</span> <span class="st">"users/5456110"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>favourites <span class="ot">&lt;-</span> <span class="st">"/collections/2KRQXA3T/items/top"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>userid <span class="ot">&lt;-</span> <span class="st">"users/5456110/"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>favourites <span class="ot">&lt;-</span> <span class="st">"collections/2KRQXA3T/items/top"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>params <span class="ot">&lt;-</span> <span class="st">"?format=bib&amp;style=feminist-economics&amp;linkwrap=1&amp;locale=en-GB"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>bib <span class="ot">&lt;-</span> <span class="fu">readLines</span>(curl<span class="sc">::</span><span class="fu">curl</span>(<span class="fu">paste0</span>(zotero, userid, favourites, params)))</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(bib)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tryCatch</span>({</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  bib <span class="ot">&lt;-</span> <span class="fu">readLines</span>(curl<span class="sc">::</span><span class="fu">curl</span>(<span class="fu">paste0</span>(zotero, userid, favourites, params)))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(bib)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}, <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"Unable to load favourite papers from Zotero. Please visit my [library](https://www.zotero.org/kathsherratt/library) directly.</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"Error: "</span>, <span class="fu">conditionMessage</span>(e), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <!--?xml version="1.0"?-->
 <div class="csl-bib-body" style="line-height: 1.35; padding-left: 1em; text-indent:-1em;" role="list">
 <div class="csl-entry" role="listitem">
 Abbott, Sam, Katharine Sherratt, Nikos Bosse, Hugo Gruson, Johannes Bracher, and Sebastian Funk. 2022. “Evaluating an Epidemiologically Motivated Surrogate Model of a Multi-Model Ensemble.” medRxiv. doi:<a href="https://doi.org/10.1101/2022.10.12.22280917">10.1101/2022.10.12.22280917</a>.
-</div>
-<div class="csl-entry" role="listitem">
-“An Introduction to Systematic Reviews.” 2025. <i>SAGE Publications Ltd</i>. <a href="https://uk.sagepub.com/en-gb/eur/an-introduction-to-systematic-reviews/book245742">https://uk.sagepub.com/en-gb/eur/an-introduction-to-systematic-reviews/book245742</a>.
 </div>
 <div class="csl-entry" role="listitem">
 Asthana, Sumegha, Sanjana Mukherjee, Alexandra L. Phelan, Ibrahim B. Gobir, J. J. Woo, Clare Wenham, Mohammad Mushtuq Husain, et al.&nbsp;2025. “Decision-Making under Epistemic, Strategic and Institutional Uncertainty during COVID-19: Findings from a Six-Country Empirical Study.” <i>BMJ Global Health</i> 10 (2). doi:<a href="https://doi.org/10.1136/bmjgh-2024-018124">10.1136/bmjgh-2024-018124</a>.
@@ -432,9 +444,6 @@ Glasser, John W., Nathaniel Hupert, Mary M. McCauley, and Richard Hatchett. 2011
 Gyllingberg, Linnéa, Abeba Birhane, and David J. T. Sumpter. 2023. “The Lost Art of Mathematical Modelling.” <i>Mathematical Biosciences</i> 362 (August): 109033. doi:<a href="https://doi.org/10.1016/j.mbs.2023.109033">10.1016/j.mbs.2023.109033</a>.
 </div>
 <div class="csl-entry" role="listitem">
-Hadley, Liza, Caylyn Rich, Alex Tasker, Olivier Restif, and Sebastian Funk. 2025. “How Does Policy Modelling Work in Practice? A Global Analysis on the Use of Epidemiological Modelling in Health Crises.” medRxiv. doi:<a href="https://doi.org/10.1101/2024.08.12.24311899">10.1101/2024.08.12.24311899</a>.
-</div>
-<div class="csl-entry" role="listitem">
 Hall, Kara, Amanda Vogel, Grace Huang, Katrina Serrano, Elise Rice, Sophia Tsakraklides, and Stephen Fiore. 2018. “The Science of Team Science: A Review of the Empirical Evidence and Research Gaps on Collaboration in Science.” <i>American Psychologist</i> 73 (May): 532–548. doi:<a href="https://doi.org/10.1037/amp0000319">10.1037/amp0000319</a>.
 </div>
 <div class="csl-entry" role="listitem">
@@ -445,9 +454,6 @@ Jebeile, Julie, and Anouk Barberousse. 2021. “Model Spread and Progress in Cli
 </div>
 <div class="csl-entry" role="listitem">
 Jorm, Anthony. 2025. <i>Expert Consensus in Science</i>. Springer Nature. doi:<a href="https://doi.org/10.1007/978-981-97-9222-1">10.1007/978-981-97-9222-1</a>.
-</div>
-<div class="csl-entry" role="listitem">
-Kim, Minsu, Evan L. Ray, and Nicholas G. Reich. 2024. “Beyond Forecast Leaderboards: Measuring Individual Model Importance Based on Contribution to Ensemble Accuracy.” arXiv. doi:<a href="https://doi.org/10.48550/arXiv.2412.08916">10.48550/arXiv.2412.08916</a>.
 </div>
 <div class="csl-entry" role="listitem">
 Kuma, Peter, Frida A.-M. Bender, and Aiden R. Jönsson. 2023. “Climate Model Code Genealogy and Its Relation to Climate Feedbacks and Sensitivity.” <i>Journal of Advances in Modeling Earth Systems</i> 15 (7): e2022MS003588. doi:<a href="https://doi.org/10.1029/2022MS003588">10.1029/2022MS003588</a>.
@@ -483,22 +489,22 @@ Medley, Graham F. 2022. “A Consensus of Evidence: The Role of SPI-M-O in the U
 Metcalf, C. J. E., W. J. Edmunds, and J. Lessler. 2015. “Six Challenges in Modelling for Public Health Policy.” <i>Epidemics</i>, Challenges in Modelling Infectious DIsease Dynamics, 10 (March): 93–96. doi:<a href="https://doi.org/10.1016/j.epidem.2014.08.008">10.1016/j.epidem.2014.08.008</a>.
 </div>
 <div class="csl-entry" role="listitem">
+Mitchell, Margaret, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, and Timnit Gebru. 2019. “Model Cards for Model Reporting.” In <i>Proceedings of the Conference on Fairness, Accountability, and Transparency</i>, 220–229. doi:<a href="https://doi.org/10.1145/3287560.3287596">10.1145/3287560.3287596</a>.
+</div>
+<div class="csl-entry" role="listitem">
 Moore, Mackenzie, Hailey Robertson, David Rosado, Ellie Graeden, Colin J. Carlson, and Rebecca Katz. 2024. “Core Components of Infectious Disease Outbreak Response.” <i>SSM - Health Systems</i> 3 (December): 100030. doi:<a href="https://doi.org/10.1016/j.ssmhs.2024.100030">10.1016/j.ssmhs.2024.100030</a>.
 </div>
 <div class="csl-entry" role="listitem">
 Morgan, M. Granger. 2014. “Use (and Abuse) of Expert Elicitation in Support of Decision Making for Public Policy.” <i>Proceedings of the National Academy of Sciences</i> 111 (20): 7176–7184. doi:<a href="https://doi.org/10.1073/pnas.1319946111">10.1073/pnas.1319946111</a>.
 </div>
 <div class="csl-entry" role="listitem">
-Morgan, Oliver. 2019. “How Decision Makers Can Use Quantitative Approaches to Guide Outbreak Responses.” <i>Philosophical Transactions of the Royal Society B: Biological Sciences</i> 374 (1776): 20180365. doi:<a href="https://doi.org/10.1098/rstb.2018.0365">10.1098/rstb.2018.0365</a>.
+Navarro, Danielle J. 2019. “Between the Devil and the Deep Blue Sea: Tensions Between Scientific Judgement and Statistical Model Selection.” <i>Computational Brain &amp; Behavior</i> 2 (1): 28–34. doi:<a href="https://doi.org/10.1007/s42113-018-0019-z">10.1007/s42113-018-0019-z</a>.
 </div>
 <div class="csl-entry" role="listitem">
-Nixon, Kristen, Sonia Jindal, Felix Parker, Maximilian Marshall, Nicholas G. Reich, Kimia Ghobadi, Elizabeth C. Lee, Shaun Truelove, and Lauren Gardner. 2022. “Real-Time COVID-19 Forecasting: Challenges and Opportunities of Model Performance and Translation.” <i>The Lancet Digital Health</i> 4 (10): e699–e701. doi:<a href="https://doi.org/10.1016/S2589-7500(22)00167-4">10.1016/S2589-7500(22)00167-4</a>.
+Oliver, Kathryn. 2022. “How Policy Appetites Shape, and Are Shaped by Evidence Production and Use.” In , edited by Patrick Fafard, Evelyne de Leeuw, and Adele Cassola, 77–101. Palgrave. <a href="https://link.springer.com/book/10.1007/978-3-030-98985-9">https://link.springer.com/book/10.1007/978-3-030-98985-9</a>.
 </div>
 <div class="csl-entry" role="listitem">
 Owek, Collins J., Fatuma Guleid, Justinah K. Maluni, Joyline Jepkosgei, Vincent Were, So Yoon Sim, Raymond Hutubessy, Brittany L. Hagedorn, Jacinta Nzinga, and Jacquie N. Oliwa. 2024. “Lessons Learned from Covid-19 Modelling Efforts for Policy Decision-Making in Lower- and Middle-Income Countries.” medRxiv. doi:<a href="https://doi.org/10.1101/2024.01.30.24301978">10.1101/2024.01.30.24301978</a>.
-</div>
-<div class="csl-entry" role="listitem">
-Palmer, Joseph, Katharine Sherratt, Richard Martin-Nielsen, Jonnie Bevan, Hamish Gibbs, Cmmid COVID-19 Working Group, Sebastian Funk, and Sam Abbott. 2021. “Covidregionaldata: Subnational Data for COVID-19 Epidemiology.” <i>Journal of Open Source Software</i> 6 (63): 3290. doi:<a href="https://doi.org/10.21105/joss.03290">10.21105/joss.03290</a>.
 </div>
 <div class="csl-entry" role="listitem">
 Parkhurst, Justin O., and Sudeepa Abeysinghe. 2016. “What Constitutes ‘Good’ Evidence for Public Health and Social Policy-Making? From Hierarchies to Appropriateness.” <i>Social Epistemology</i> 30 (5–6): 665–679. doi:<a href="https://doi.org/10.1080/02691728.2016.1172365">10.1080/02691728.2016.1172365</a>.
@@ -522,25 +528,13 @@ Salajan, Andreea, Svetla Tsolova, Massimo Ciotti, and Jonathan E. Suk. 2020. “
 Scarpino, Samuel V., and Giovanni Petri. 2019. “On the Predictability of Infectious Disease Outbreaks.” <i>Nature Communications</i> 10 (1): 898. doi:<a href="https://doi.org/10.1038/s41467-019-08616-0">10.1038/s41467-019-08616-0</a>.
 </div>
 <div class="csl-entry" role="listitem">
-Sherratt, Katharine, Sam Abbott, Sophie R. Meakin, Joel Hellewell, James D. Munday, Nikos Bosse, Mark Jit, and Sebastian Funk. 2021. “Exploring Surveillance Data Biases When Estimating the Reproduction Number: With Insights into Subpopulation Transmission of COVID-19 in England.” <i>Philosophical Transactions of the Royal Society B: Biological Sciences</i> 376 (1829): 20200283. doi:<a href="https://doi.org/10.1098/rstb.2020.0283">10.1098/rstb.2020.0283</a>.
-</div>
-<div class="csl-entry" role="listitem">
-Sherratt, Katharine, AC Carnegie, A Kucharski, A Cori, CAB Pearson, CI Jarvis, C Overton, et al.&nbsp;2024. “Improving Modelling for Epidemic Responses: Reflections from Members of the UK Infectious Disease Modelling Community on Their Experiences during the COVID-19 Pandemic.” <i>Wellcome Open Research</i> 9 (12). doi:<a href="https://doi.org/10.12688/wellcomeopenres.19601.1">10.12688/wellcomeopenres.19601.1</a>.
-</div>
-<div class="csl-entry" role="listitem">
-Sherratt, Katharine, Rok Grah, Bastian Prasse, Sam Abbott, and Sebastian Funk. 2024. “The Influence of Methodology and Location Specificity on Epidemic Forecast Accuracy among European COVID-19 Forecasts.” Manuscript.
-</div>
-<div class="csl-entry" role="listitem">
-Sherratt, Katharine, Hugo Gruson, Rok Grah, Helen Johnson, Rene Niehus, Bastian Prasse, Frank Sandmann, et al.&nbsp;2023. “Predictive Performance of Multi-Model Ensemble Forecasts of COVID-19 across European Nations.” Edited by Amy Wesolowski, Neil M Ferguson, Jeffrey L Shaman, and Sen Pei. <i>eLife</i> 12 (April): e81916. doi:<a href="https://doi.org/10.7554/eLife.81916">10.7554/eLife.81916</a>.
-</div>
-<div class="csl-entry" role="listitem">
-Sherratt, Katharine, Ajitesh Srivastava, Kylie Ainslie, David E. Singh, Aymar Cublier, Maria Cristina Marinescu, Jesus Carretero, et al.&nbsp;2024. “Characterising Information Gains and Losses When Collecting Multiple Epidemic Model Outputs.” <i>Epidemics</i>, March, 100765. doi:<a href="https://doi.org/10.1016/j.epidem.2024.100765">10.1016/j.epidem.2024.100765</a>.
-</div>
-<div class="csl-entry" role="listitem">
 Slauter, Will. 2011. “WRITE UP YOUR DEAD.” <i>Media History</i> 17 (1): 1–15. doi:<a href="https://doi.org/10.1080/13688804.2011.532371">10.1080/13688804.2011.532371</a>.
 </div>
 <div class="csl-entry" role="listitem">
 Soll, Jack B., and Richard P. Larrick. 2009. “Strategies for Revising Judgment: How (and How Well) People Use Others’ Opinions.” <i>Journal of Experimental Psychology: Learning, Memory, and Cognition</i> 35 (3): 780–805. doi:<a href="https://doi.org/10.1037/a0015145">10.1037/a0015145</a>.
+</div>
+<div class="csl-entry" role="listitem">
+Sundqvist, Göran, Ingemar Bohlin, Erlend AT Hermansen, and Steven Yearley. 2015. “Formalization and Separation: A Systematic Basis for Interpreting Approaches to Summarizing Science for Climate Policy.” <i>Social Studies of Science</i> 45 (3): 416–440. doi:<a href="https://doi.org/10.1177/0306312715583737">10.1177/0306312715583737</a>.
 </div>
 <div class="csl-entry" role="listitem">
 Tariq, Mehreen, Margaret Haworth-Brockman, and Seyed M. Moghadas. 2021. “Ten Years of Pan-InfORM: Modelling Research for Public Health in Canada.” <i>AIMS Public Health</i> 8 (2): 265–274. doi:<a href="https://doi.org/10.3934/publichealth.2021020">10.3934/publichealth.2021020</a>.
@@ -567,8 +561,10 @@ Whitty, Christopher J. M. 2015. “What Makes an Academic Paper Useful for Healt
 Yardley, Elizabeth, and Fotios Petropoulos. 2021. “Beyond Error Measures to the Utility and Cost of the Forecasts.” <i>Foresight: The International Journal of Applied Forecasting</i>, no. 63: 36–45. <a href="https://econpapers.repec.org/article/forijafaa/y_3a2021_3ai_3a63_3ap_3a36-45.htm">https://econpapers.repec.org/article/forijafaa/y_3a2021_3ai_3a63_3ap_3a36-45.htm</a>.
 </div>
 </div>
+<p>:::</p>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
