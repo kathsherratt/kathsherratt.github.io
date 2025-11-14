@@ -45,6 +45,8 @@ Before training in epidemiology, I worked at the Wellcome Trust across both scie
 I aim to make all of my work openly available, from concept to code to publication. 
 If you are interested in any of my work and can't find it, please contact me. 
 
+- Research work
+
 - PhD by prior publication: 
   - [Collaborative outbreak modelling for decision support: evaluating trade-offs from multi-model combination](https://researchonline.lshtm.ac.uk/id/eprint/4674767/)
 - [Papers](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en)
@@ -65,6 +67,5 @@ Please get in touch - I'm always glad to chat about research, hear feedback, and
 
 ---
 
-<img src="https://ghchart.rshah.org/kathsherratt" alt="Github contributions" />
+[<img src="https://ghchart.rshah.org/kathsherratt" alt="Software contributions" />](https://github.com/kathsherratt)
 
-_[Software contributions](https://github.com/kathsherratt)_

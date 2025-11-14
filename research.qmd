@@ -6,11 +6,9 @@ toc: true
 toc-depth: 2
 ---
 
-I work in the [Centre for Mathematical Modelling of Infectious Disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases) at the [LSHTM](https://www.lshtm.ac.uk) in London. I've been based in the [epiforecasts](https://epiforecasts.io/) group since 2020. 
+I work in the [Centre for Mathematical Modelling of Infectious Disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases) at the [LSHTM](https://www.lshtm.ac.uk) in London. I've been based in the [epiforecasts](https://epiforecasts.io/) group since 2020. See a full list of papers on [Google Scholar](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en).
 
-<img src="https://ghchart.rshah.org/kathsherratt" alt="Github contributions" />
-
-::: {.column-margin}
+::: {.callout-tip title="Software" collapse="false"}
 
 ### Software
 
@@ -24,9 +22,10 @@ Software development that I've led or substantially contributed to include:
 - [covidregionaldata](https://epiforecasts.io/covidregionaldata/)
 
 All research code is associated with a [Github](https://github.com/kathsherratt) repository, typically under the [epiforecasts](https://github.com/epiforecasts/) organisation.
+
 :::
 
-### Selected publications
+::: {.callout-tip title="Selected publications" collapse="false"}
 
 ```{r, results='asis'}
 zotero <- "https://api.zotero.org/"
@@ -43,3 +42,4 @@ tryCatch({
 })
 ```
 
+:::

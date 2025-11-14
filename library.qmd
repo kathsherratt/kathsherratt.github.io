@@ -10,7 +10,6 @@ My reference library is publicly available on [Zotero](https://www.zotero.org/ka
 
 Below is a collection of some of my favourite papers.
 
-::: {.callout-info title="Favourites" collapse="true"}
 ```{r, results='asis'}
 zotero <- "https://api.zotero.org/"
 userid <- "users/5456110/"
@@ -25,4 +24,4 @@ tryCatch({
   cat("Error: ", conditionMessage(e), "\n")
 })
 ```
-:::
+
