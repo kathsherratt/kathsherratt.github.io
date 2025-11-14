@@ -14,7 +14,7 @@ about:
 ---
 
 I'm Kath, a researcher working on real-time epidemiological analysis. 
-I focus on mathematical modelling during infectious disease outbreaks. 
+I focus on quantitative modelling as a way of supporting public health decisions to control infectious disease outbreaks. 
 I'm especially interested in model evaluation, comparison, and combination.
 My work is openly available by default.
 
@@ -24,14 +24,13 @@ I'm also a happy Londoner, a feminist, and a [community gardener](https://www.al
 
 ::: {.callout-note title="My work" collapse="true"}
 
-My core interest is in rapid evidence synthesis for public health decision-making. 
-I focus on using quantitative modelling to understand infectious disease dynamics, with particular experience in real-time forecasting.
+I focus on using quantitative modelling to understand infectious disease dynamics, with specific experience in real-time forecasting. I'm particularly interested in evaluating evidence synthesis and expert advice in public health policy.
 
 My work includes 
 
 - methods for model evaluation, comparison, and combination (ensemble modelling)
 - combining scientific judgements through expert elicitation and consensus forming
-- evaluating the strengths, weaknesses, and trade-offs in scientific advisory groups that operate within the resource constraints of emergency response.
+- evaluating the strengths and weaknesses of modelling-based scientific advice
 
 I currently lead a theme of work around outbreak response at LSHTM. 
 I teach across modules in epidemiology and data science, and advocate for an inclusive working environment at my institution, focussing on disability. 
@@ -63,3 +62,9 @@ Please get in touch - I'm always glad to chat about research, hear feedback, and
 - katharine.sherratt (at) lshtm.ac.uk
 
 :::
+
+---
+
+<img src="https://ghchart.rshah.org/kathsherratt" alt="Github contributions" />
+
+_[Software contributions](https://github.com/kathsherratt)_
