@@ -6,13 +6,46 @@ toc: true
 toc-depth: 2
 ---
 
-I work in the [Centre for Mathematical Modelling of Infectious Disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases) at the [LSHTM](https://www.lshtm.ac.uk) in London. I've been based in the [epiforecasts](https://epiforecasts.io/) group since 2020. See a full list of papers on [Google Scholar](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en).
+My research focuses on the role of quantitative modelling in public health.
+I have specific experience working on infectious disease outbreaks, including real-time forecasting and emergency response. 
 
-::: {.callout-tip title="Software" collapse="false"}
+My interests are broadly 
 
-### Software
+- methods for model evaluation, comparison, and combination (ensemble modelling)
+- evidence synthesis and expert elicitation, specifically in policy-facing expert advisory groups
+- evaluating the strengths and weaknesses of modelling as a tool for expert advice
 
-Software development that I've led or substantially contributed to include:
+::: {.callout-note title="Experience" collapse="true"}
+
+I work in the [Centre for Mathematical Modelling of Infectious Disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases) at the [LSHTM](https://www.lshtm.ac.uk) in London. 
+I've been based in the [epiforecasts](https://epiforecasts.io/) group since 2020. 
+
+I currently lead a theme of work around outbreak response at LSHTM. 
+I teach across modules in epidemiology and data science, and advocate for an inclusive working environment at my institution, focussing on disability. 
+
+Previously, I worked on the COVID-19 response, contributing research work to the UK’s Scientific Advisory Group for Emergencies and building modelling infrastructure for the European Centre for Disease Prevention and Control. 
+Before training in epidemiology, I worked at the Wellcome Trust across both science funding and the investment portfolio. 
+
+:::
+
+::: {.callout-note title="PhD" collapse="true"}
+I wrote my PhD as work "by publication". 
+This included and evaluated my emergency response work during the COVID-19 pandemic (2020-2023). 
+My commentary critically reflected the complexities of working in collaborative academic research in response to real-time policy demand.
+
+  - [Collaborative outbreak modelling for decision support: evaluating trade-offs from multi-model combination](https://researchonline.lshtm.ac.uk/id/eprint/4674767/)
+
+:::
+
+### Recent work
+
+::: {.grid}
+
+::: {.g-col-6}
+
+#### Software
+
+Software that I've led development or substantially contributed to include:
 
 - [Gaza nutrition dashboard](https://cmmid.github.io/gaza-response/)
 - [Nowcasting and Forecasting of Infectious Disease Dynamics](https://nfidd.github.io/nfidd/)
@@ -25,21 +58,21 @@ All research code is associated with a [Github](https://github.com/kathsherratt)
 
 :::
 
-::: {.callout-tip title="Selected publications" collapse="false"}
+::: {.g-col-6}
 
+#### Papers
+
+My publications are available at [Google Scholar](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en), and are open access (please contact me if not available).
+
+::: {.callout-caution title="Selected publications" collapse="true"}
 ```{r, results='asis'}
 zotero <- "https://api.zotero.org/"
 userid <- "users/5456110/"
 pubs <- "collections/Z3HDMSU9/items/top"
 params <- "?format=bib&style=feminist-economics&linkwrap=1&locale=en-GB"
 
-tryCatch({
-  bib <- readLines(curl::curl(paste0(zotero, userid, pubs, params)))
-  cat(bib)
-}, error = function(e) {
-  cat("Unable to load publications from Zotero. Please visit my [Google Scholar](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en) or [Zotero library](https://www.zotero.org/kathsherratt/library) directly.\n\n")
-  cat("Error: ", conditionMessage(e), "\n")
-})
+bib <- readLines(curl::curl(paste0(zotero, userid, pubs, params)))
+cat(bib)
 ```
-
 :::
+
