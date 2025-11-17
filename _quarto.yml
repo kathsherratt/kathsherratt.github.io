@@ -2,6 +2,8 @@ project:
   type: website
 
 website:
+  repo-url: https://github.com/kathsherratt/kathsherratt.github.io
+  repo-actions: [source]
   open-graph: true
   title: "Kath Sherratt"
   navbar:
