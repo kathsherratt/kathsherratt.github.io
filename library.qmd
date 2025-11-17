@@ -6,7 +6,7 @@ toc: true
 toc-depth: 2
 ---
 
-My reference library is publicly available on [Zotero](https://www.zotero.org/kathsherratt/library).
+My full reference library is publicly available on [Zotero](https://www.zotero.org/kathsherratt/library).
 
 Below is a collection of some of my favourite papers.
 

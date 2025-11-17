@@ -14,35 +14,23 @@ about:
 ---
 
 I'm Kath, a researcher working on real-time epidemiological analysis. 
-I focus on quantitative modelling as a way of supporting public health decisions to control infectious disease outbreaks. 
-I'm especially interested in model evaluation, comparison, and combination.
-My work is openly available by default.
 
-I work in the [Centre for Mathematical Modelling of Infectious Disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases) in London, based in the [epiforecasts](https://epiforecasts.io/) group. 
 I'm a happy Londoner, a feminist, and a [community gardener](https://www.albertatra.org/alberta-fruit-commons).
 
 
-::: {.callout-note title="My work" collapse="true"}
+::: {.callout-note title="Research" collapse="true"}
 
-I focus on using quantitative modelling to understand infectious disease dynamics, with specific experience in real-time forecasting. 
-I'm particularly interested in evaluating evidence synthesis and expert advice in public health policy.
+I focus on quantitative modelling to support public health during infectious disease outbreaks. 
+I'm particularly interested in model evaluation, evidence synthesis, and expert advice in public health policy.
+I work in the [Centre for Mathematical Modelling of Infectious Disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases) in London. I aim to make all of my work openly available, from concept to code to publication. 
 
-I aim to make all of my work openly available, from concept to code to publication. 
-If you are interested in any of my work and can't find it, please contact me. 
-
-<button>[My research](./research)</button>
-
-- PhD by prior publication: 
-  - [Collaborative outbreak modelling for decision support: evaluating trade-offs from multi-model combination](https://researchonline.lshtm.ac.uk/id/eprint/4674767/)
-- [Papers](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en)
-- [Software](https://github.com/kathsherratt)
-- [Research library](https://www.zotero.org/kathsherratt/library)
+[My research](./research){.btn .btn-primary} [My library](./library){.btn .btn-primary}
 
 :::
 
 ::: {.callout-tip title="Contact" collapse="true"}
 
-Please get in touch - I'm always glad to chat about research, hear feedback, and support similar work.
+Please get in touch - I'm always glad to chat about research, and welcome feedback and collaborative work.
 
 - [@kathsherratt](https://twitter.com/kathsherratt)
 - [LinkedIn](https://www.linkedin.com/in/kathsherratt/)

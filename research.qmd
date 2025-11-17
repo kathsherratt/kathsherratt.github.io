@@ -15,6 +15,10 @@ My interests are broadly
 - evidence synthesis and expert elicitation, specifically in policy-facing expert advisory groups
 - evaluating the strengths and weaknesses of modelling as a tool for expert advice
 
+::: {.column-margin}
+If you're also interested in these topics (or curious to see what I'm reading), you might enjoy browsing around my [research library](./library).
+:::
+
 ::: {.callout-note title="Experience" collapse="true"}
 
 I work in the [Centre for Mathematical Modelling of Infectious Disease](https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases) at the [LSHTM](https://www.lshtm.ac.uk) in London. 
@@ -37,15 +41,17 @@ My commentary critically reflected the complexities of working in collaborative 
 
 :::
 
-### Recent work
+::: {.callout-note title="Research outputs" collapse="true"}
 
 ::: {.grid}
 
 ::: {.g-col-6}
 
-#### Software
+I develop software using R (occasionally Python), and publish all software in public and under an open license on [Github](https://github.com/kathsherratt).
 
-Software that I've led development or substantially contributed to include:
+Below is a selection of software tools that I've led or substantially co-created.
+
+::: {.callout-caution title="Software" collapse="true"}
 
 - [Gaza nutrition dashboard](https://cmmid.github.io/gaza-response/)
 - [Nowcasting and Forecasting of Infectious Disease Dynamics](https://nfidd.github.io/nfidd/)
@@ -54,17 +60,17 @@ Software that I've led development or substantially contributed to include:
   - [The European COVID-19 Scenario Hub](https://covid19scenariohub.eu/)
 - [covidregionaldata](https://epiforecasts.io/covidregionaldata/)
 
-All research code is associated with a [Github](https://github.com/kathsherratt) repository, typically under the [epiforecasts](https://github.com/epiforecasts/) organisation.
+:::
 
 :::
 
 ::: {.g-col-6}
 
-#### Papers
+My publications are available at [Google Scholar](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en) and are open access (please contact me if not available). 
 
-My publications are available at [Google Scholar](https://scholar.google.com/citations?user=sX3wiBAAAAAJ&hl=en), and are open access (please contact me if not available).
+Below is a selection of publications that I've led or substantially co-created.
 
-::: {.callout-caution title="Selected publications" collapse="true"}
+::: {.callout-caution title="Publications" collapse="true"}
 ```{r, results='asis'}
 zotero <- "https://api.zotero.org/"
 userid <- "users/5456110/"
@@ -74,5 +80,3 @@ params <- "?format=bib&style=feminist-economics&linkwrap=1&locale=en-GB"
 bib <- readLines(curl::curl(paste0(zotero, userid, pubs, params)))
 cat(bib)
 ```
-:::
-
