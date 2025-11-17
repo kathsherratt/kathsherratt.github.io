@@ -18,7 +18,7 @@ I'm Kath, a researcher working on real-time epidemiological analysis.
 I'm a happy Londoner, a feminist, and a [community gardener](https://www.albertatra.org/alberta-fruit-commons).
 
 
-::: {.callout-note title="Research" collapse="true"}
+::: {.callout-note title="Research" collapse="false"}
 
 I focus on quantitative modelling to support public health during infectious disease outbreaks. 
 I'm particularly interested in model evaluation, evidence synthesis, and expert advice in public health policy.
@@ -38,7 +38,4 @@ Please get in touch - I'm always glad to chat about research, and welcome feedba
 
 :::
 
----
-
-[<img src="https://ghchart.rshah.org/kathsherratt" alt="Software contributions" />](https://github.com/kathsherratt)
 

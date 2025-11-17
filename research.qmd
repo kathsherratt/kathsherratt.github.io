@@ -31,7 +31,6 @@ Previously, I worked on the COVID-19 response, contributing research work to the
 Before training in epidemiology, I worked at the Wellcome Trust across both science funding and the investment portfolio. 
 
 :::
-
 ::: {.callout-note title="PhD" collapse="true"}
 I wrote my PhD as work "by publication". 
 This included and evaluated my emergency response work during the COVID-19 pandemic (2020-2023). 
@@ -41,7 +40,7 @@ My commentary critically reflected the complexities of working in collaborative 
 
 :::
 
-::: {.callout-note title="Research outputs" collapse="true"}
+::: {.callout-note title="Research outputs" collapse="false"}
 
 ::: {.grid}
 
