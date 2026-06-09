@@ -1,0 +1,17 @@
+{
+  "hash": "339a399a3c41f80140f31361041f3c19",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"CMMID wrapped\"\n---\n\n### Membership\n\n- Total members ever: 300\n- Active members (at least 1 day active in 2025): 194\n- New members in 2025: 43\n- Deactivated members in 2025: 48\n\n### Activity volumes\n\nA member is active if they've posted a message or read at least one channel or direct message.\n- Members active in 2025: 194\n- Members sent a total 1.50747\\times 10^{5} messages in 2025\n- Members who were active, but never logged in from a mobile: 60\n\n## Messaging patterns\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](cmmid_files/figure-html/messages-timeseries-1.png){width=672}\n:::\n:::\n\n\n- 122 never posted a message (in 2025)\n\nPosting messages in channels helps to make information more discoverable and transparent. This is the number of messages that a member posted to a public or private channel.\n\n- On average, members posted in a ratio of `r` : `r` DMs to channels\n- Some members only ever used DMs (never posted a message in channels): 136\n- Some members used reactions more than others\n\n\n",
+    "supporting": [
+      "cmmid_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

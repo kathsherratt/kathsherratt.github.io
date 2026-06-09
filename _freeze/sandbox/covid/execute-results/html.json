@@ -1,0 +1,17 @@
+{
+  "hash": "de3018385c3f30787120fe5d32c0655b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"COVID-19 retrospective\"\nformat: html\n---\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(dplyr)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n\nAttaching package: 'dplyr'\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n```\n\n\n:::\n\n```{.r .cell-code}\nlibrary(knitr)\nknitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)\n\nsource(\"https://gist.githubusercontent.com/sbfnk/d2900c745312219e3e48e08adde47cde/raw/c98fbdd738eafa71af12d05af0d3e068cf5b607b/get_covid19_nowcasts.r\")\n```\n:::\n\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"C\"\n```\n\n\n:::\n:::\n\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"A\"\n[1] \"B\"\n```\n\n\n:::\n:::\n\n```",
+    "supporting": [
+      "covid_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
